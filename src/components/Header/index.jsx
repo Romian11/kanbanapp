@@ -28,7 +28,7 @@ const Header = ({ grouping, setGrouping, ordering, setOrdering }) => {
         <OutsideClickHandler onOutsideClick={() => setDisplayOpen(false)}>
           <div className="DropdownBox one">
             <div style={{ display: "flex", alignItems: "center", gap: "4.50rem" }}>
-              <span>Grouping</span>
+              <span style={{fontSize:"14px"}}>Grouping</span>
               <button
                 className="Display__button"
                 onClick={() => toggleDropdown(setGroupingOpen, [setOrderingOpen])}
@@ -61,7 +61,7 @@ const Header = ({ grouping, setGrouping, ordering, setOrdering }) => {
             </div>
 
             <div style={{ display: "flex", alignItems: "center", gap: "4.75rem" }}>
-              <span>Ordering</span>
+              <span style={{fontSize:"14px"}}>Ordering</span>
               <button
                 className="Display__button"
                 onClick={() => toggleDropdown(setOrderingOpen, [setGroupingOpen])}

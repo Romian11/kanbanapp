@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-
+html{
+  font-size: 10.5%;
+  padding-left:15px;
+}
 
 body {
   margin: 0;

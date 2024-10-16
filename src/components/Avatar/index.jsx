@@ -18,7 +18,7 @@ const Avatar = ({ initial, id, available = false }) => {
   // Rendering Avatar component with dynamic styles
   return (
     <div className="Avatar" style={{ backgroundColor: avatarColors[id % 5], marginRight: "12px" }}>
-      <span style={{ fontSize: "smaller" }}>{initial}</span>
+      <span style={{ fontSize: "12px" }}>{initial}</span>
       <div
         className="Online__indicator"
         style={{ backgroundColor: availabilityColor }}

@@ -18,12 +18,12 @@ const Card = ({ data, user, grouping }) => {
           <Avatar initial={initial} available={user.available} id={userId} />
         )}
       </header>
-      <section className="Card__content">
+      <section className="Card__content" style={{fontSize:"14px"}}>
         {grouping !== 0 && progressIcons(data.status)}
         <p className="Card__title">{title}</p>
       </section>
       <footer className="__footer">
-        {grouping !== 2 && <span>{priorityIcons(data.priority)}</span>}
+        {grouping !== 2 && <span style={{fontSize:"14px"}}>{priorityIcons(data.priority)}</span>}
         {tag.map((tag, index) => (
           <Tag key={index} text={tag} />
         ))}

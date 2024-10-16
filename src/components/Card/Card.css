@@ -1,3 +1,4 @@
+/* Base styles for the card */
 .Card {
     background-color: #fff;
     padding: 0.5rem 1rem;
@@ -5,40 +6,50 @@
     min-height: 2px;
     margin: 0.70rem 0rem;
     position: relative;
-    
-    /* width: 350px; */
     display: inline-flex;
     flex-direction: column;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+                rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+                rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     transition: all 0.3s ease;
-  }
-  
-  .Card:hover {
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+/* Hover effect */
+.Card:hover {
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px,
+                rgba(0, 0, 0, 0.07) 0px 2px 2px,
+                rgba(0, 0, 0, 0.07) 0px 4px 4px,
+                rgba(0, 0, 0, 0.07) 0px 8px 8px,
+                rgba(0, 0, 0, 0.07) 0px 16px 16px;
     transform: translateY(-3px);
-  }
-  
-  .Card__header {
+}
+
+/* Card header styles */
+.Card__header {
     font-size: 1.25rem;
     font-weight: 400;
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  
-  .Card__text {
+}
+
+/* Card text styles */
+.Card__text {
     color: #666;
     font-size: 1.25rem;
     margin: 0;
-  }
+}
 
-  .__footer{
+/* Footer styles */
+.__footer {
     gap: 0rem;
-     display: flex;
-      alignItems: center; 
-  }
-  .Card {
+    display: flex;
+    align-items: center;
+}
+
+/* Additional Card styling */
+.Card {
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -46,33 +57,110 @@
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .Card__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: -10px;
-  }
-  
-  .Card__id {
+}
+
+/* Card ID styles */
+.Card__id {
     font-size: medium;
     color: #808080;
-  }
-  
-  .Card__content {
+}
+
+/* Card content styles */
+.Card__content {
     flex-grow: 1;
     display: flex;
     gap: 0rem;
     align-items: center;
-  }
-  
-  .Card__title {
+}
+
+/* Card title styles */
+.Card__title {
     font-size: 13px;
-  }
-  
-  .Card__footer {
+}
+
+/* Card footer styles */
+.Card__footer {
     display: flex;
     align-items: center;
     gap: 0rem;
-  }
+}
+
+/* Tag icon styles */
+.Tag_icon {
+    font-size: 14px;
+}
+
+.Tag svg {
+    font-size: 10px;
+    margin-right: 5px;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .Card {
+        padding: 1rem;
+        flex-direction: column;
+    }
+
+    .Card__header {
+        font-size: 1.1rem;
+    }
+
+    .Card__text {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .Card {
+        width: 90%;
+        margin: 1rem auto;
+    }
+
+    .Card__header {
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+
+    .Card__title {
+        font-size: 12px; 
+    }
+
+    .Card__id {
+        font-size: small;
+    }
+}
+
+@media (max-width: 768px) {
+    .Card {
+        padding: 0.5rem;
+        border: none; 
+        box-shadow: none;
+    }
+
+    .Card__header {
+        justify-content: space-between;
+    }
+
+    .Card__content {
+        flex-direction: column; 
+    }
+
+    .Card__footer {
+        flex-direction: column; 
+    }
+}
+
+@media (max-width: 576px) {
+    .Card {
+        padding: 0.25rem;
+    }
+
+    .Card__header {
+        font-size: 1rem; 
+    }
+
+    .Card__text {
+        font-size: 1rem; 
+    }
+}

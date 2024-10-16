@@ -33,7 +33,6 @@ function App() {
     axios
       .get("https://api.quicksell.co/v1/internal/frontend-assignment")
       .then((res) => {
-        console.log(res.data); // Log the entire response to check its structure
         setUsers(res.data.users);
 
         const priorityMap = {};
